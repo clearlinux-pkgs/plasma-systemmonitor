@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xEC94D18F7F05997E (jr@jriddell.org)
 #
 Name     : plasma-systemmonitor
-Version  : 5.21.4
-Release  : 1
-URL      : https://download.kde.org/stable/plasma/5.21.4/plasma-systemmonitor-5.21.4.tar.xz
-Source0  : https://download.kde.org/stable/plasma/5.21.4/plasma-systemmonitor-5.21.4.tar.xz
-Source1  : https://download.kde.org/stable/plasma/5.21.4/plasma-systemmonitor-5.21.4.tar.xz.sig
+Version  : 5.22.0
+Release  : 2
+URL      : https://download.kde.org/stable/plasma/5.22.0/plasma-systemmonitor-5.22.0.tar.xz
+Source0  : https://download.kde.org/stable/plasma/5.22.0/plasma-systemmonitor-5.22.0.tar.xz
+Source1  : https://download.kde.org/stable/plasma/5.22.0/plasma-systemmonitor-5.22.0.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : BSD-3-Clause CC0-1.0 GPL-2.0 GPL-3.0 LGPL-2.0 LGPL-2.1 LGPL-3.0
@@ -78,15 +78,15 @@ locales components for the plasma-systemmonitor package.
 
 
 %prep
-%setup -q -n plasma-systemmonitor-5.21.4
-cd %{_builddir}/plasma-systemmonitor-5.21.4
+%setup -q -n plasma-systemmonitor-5.22.0
+cd %{_builddir}/plasma-systemmonitor-5.22.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1618766100
+export SOURCE_DATE_EPOCH=1623434104
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -102,21 +102,22 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1618766100
+export SOURCE_DATE_EPOCH=1623434104
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/plasma-systemmonitor
-cp %{_builddir}/plasma-systemmonitor-5.21.4/LICENSES/BSD-3-Clause.txt %{buildroot}/usr/share/package-licenses/plasma-systemmonitor/9950d3fdce1cff1f71212fb5abd31453c6ee2f8c
-cp %{_builddir}/plasma-systemmonitor-5.21.4/LICENSES/CC0-1.0.txt %{buildroot}/usr/share/package-licenses/plasma-systemmonitor/8287b608d3fa40ef401339fd907ca1260c964123
-cp %{_builddir}/plasma-systemmonitor-5.21.4/LICENSES/GPL-2.0-only.txt %{buildroot}/usr/share/package-licenses/plasma-systemmonitor/2a638514c87c4923c0570c55822620fad56f2a33
-cp %{_builddir}/plasma-systemmonitor-5.21.4/LICENSES/GPL-3.0-only.txt %{buildroot}/usr/share/package-licenses/plasma-systemmonitor/6091db0aead0d90182b93d3c0d09ba93d188f907
-cp %{_builddir}/plasma-systemmonitor-5.21.4/LICENSES/LGPL-2.0-or-later.txt %{buildroot}/usr/share/package-licenses/plasma-systemmonitor/20079e8f79713dce80ab09774505773c926afa2a
-cp %{_builddir}/plasma-systemmonitor-5.21.4/LICENSES/LGPL-2.1-only.txt %{buildroot}/usr/share/package-licenses/plasma-systemmonitor/3c3d7573e137d48253731c975ecf90d74cfa9efe
-cp %{_builddir}/plasma-systemmonitor-5.21.4/LICENSES/LGPL-3.0-only.txt %{buildroot}/usr/share/package-licenses/plasma-systemmonitor/757b86330df80f81143d5916b3e92b4bcb1b1890
-cp %{_builddir}/plasma-systemmonitor-5.21.4/LICENSES/LGPL-3.0-or-later.txt %{buildroot}/usr/share/package-licenses/plasma-systemmonitor/757b86330df80f81143d5916b3e92b4bcb1b1890
-cp %{_builddir}/plasma-systemmonitor-5.21.4/LICENSES/LicenseRef-KDE-Accepted-GPL.txt %{buildroot}/usr/share/package-licenses/plasma-systemmonitor/7d9831e05094ce723947d729c2a46a09d6e90275
-cp %{_builddir}/plasma-systemmonitor-5.21.4/LICENSES/LicenseRef-KDE-Accepted-GPL.txt %{buildroot}/usr/share/package-licenses/plasma-systemmonitor/7d9831e05094ce723947d729c2a46a09d6e90275
-cp %{_builddir}/plasma-systemmonitor-5.21.4/LICENSES/LicenseRef-KDE-Accepted-LGPL.txt %{buildroot}/usr/share/package-licenses/plasma-systemmonitor/e458941548e0864907e654fa2e192844ae90fc32
-cp %{_builddir}/plasma-systemmonitor-5.21.4/LICENSES/LicenseRef-KDE-Accepted-LGPL.txt %{buildroot}/usr/share/package-licenses/plasma-systemmonitor/e458941548e0864907e654fa2e192844ae90fc32
+cp %{_builddir}/plasma-systemmonitor-5.22.0/LICENSES/BSD-3-Clause.txt %{buildroot}/usr/share/package-licenses/plasma-systemmonitor/9950d3fdce1cff1f71212fb5abd31453c6ee2f8c
+cp %{_builddir}/plasma-systemmonitor-5.22.0/LICENSES/CC0-1.0.txt %{buildroot}/usr/share/package-licenses/plasma-systemmonitor/8287b608d3fa40ef401339fd907ca1260c964123
+cp %{_builddir}/plasma-systemmonitor-5.22.0/LICENSES/GPL-2.0-only.txt %{buildroot}/usr/share/package-licenses/plasma-systemmonitor/2a638514c87c4923c0570c55822620fad56f2a33
+cp %{_builddir}/plasma-systemmonitor-5.22.0/LICENSES/GPL-3.0-only.txt %{buildroot}/usr/share/package-licenses/plasma-systemmonitor/6091db0aead0d90182b93d3c0d09ba93d188f907
+cp %{_builddir}/plasma-systemmonitor-5.22.0/LICENSES/LGPL-2.0-or-later.txt %{buildroot}/usr/share/package-licenses/plasma-systemmonitor/20079e8f79713dce80ab09774505773c926afa2a
+cp %{_builddir}/plasma-systemmonitor-5.22.0/LICENSES/LGPL-2.1-only.txt %{buildroot}/usr/share/package-licenses/plasma-systemmonitor/3c3d7573e137d48253731c975ecf90d74cfa9efe
+cp %{_builddir}/plasma-systemmonitor-5.22.0/LICENSES/LGPL-3.0-only.txt %{buildroot}/usr/share/package-licenses/plasma-systemmonitor/757b86330df80f81143d5916b3e92b4bcb1b1890
+cp %{_builddir}/plasma-systemmonitor-5.22.0/LICENSES/LGPL-3.0-or-later.txt %{buildroot}/usr/share/package-licenses/plasma-systemmonitor/757b86330df80f81143d5916b3e92b4bcb1b1890
+cp %{_builddir}/plasma-systemmonitor-5.22.0/LICENSES/LicenseRef-KDE-Accepted-GPL.txt %{buildroot}/usr/share/package-licenses/plasma-systemmonitor/7d9831e05094ce723947d729c2a46a09d6e90275
+cp %{_builddir}/plasma-systemmonitor-5.22.0/LICENSES/LicenseRef-KDE-Accepted-GPL.txt %{buildroot}/usr/share/package-licenses/plasma-systemmonitor/7d9831e05094ce723947d729c2a46a09d6e90275
+cp %{_builddir}/plasma-systemmonitor-5.22.0/LICENSES/LicenseRef-KDE-Accepted-LGPL.txt %{buildroot}/usr/share/package-licenses/plasma-systemmonitor/e458941548e0864907e654fa2e192844ae90fc32
+cp %{_builddir}/plasma-systemmonitor-5.22.0/LICENSES/LicenseRef-KDE-Accepted-LGPL.txt %{buildroot}/usr/share/package-licenses/plasma-systemmonitor/e458941548e0864907e654fa2e192844ae90fc32
+cp %{_builddir}/plasma-systemmonitor-5.22.0/logo.png.license %{buildroot}/usr/share/package-licenses/plasma-systemmonitor/ce37caa1aac2e9037a7c5648a7519d5bb0970ed3
 pushd clr-build
 %make_install
 popd
@@ -181,14 +182,14 @@ popd
 /usr/lib64/qt5/qml/org/kde/ksysguard/page/SectionControl.qml
 /usr/lib64/qt5/qml/org/kde/ksysguard/page/libPagePlugin.so
 /usr/lib64/qt5/qml/org/kde/ksysguard/page/qmldir
+/usr/lib64/qt5/qml/org/kde/ksysguard/table/BaseCellDelegate.qml
 /usr/lib64/qt5/qml/org/kde/ksysguard/table/BaseTableView.qml
-/usr/lib64/qt5/qml/org/kde/ksysguard/table/BasicCellDelegate.qml
-/usr/lib64/qt5/qml/org/kde/ksysguard/table/CellBackground.qml
 /usr/lib64/qt5/qml/org/kde/ksysguard/table/ColumnConfigurationDialog.qml
 /usr/lib64/qt5/qml/org/kde/ksysguard/table/FirstCellDelegate.qml
 /usr/lib64/qt5/qml/org/kde/ksysguard/table/KillDialog.qml
 /usr/lib64/qt5/qml/org/kde/ksysguard/table/LineChartCellDelegate.qml
 /usr/lib64/qt5/qml/org/kde/ksysguard/table/TableViewHeader.qml
+/usr/lib64/qt5/qml/org/kde/ksysguard/table/TextCellDelegate.qml
 /usr/lib64/qt5/qml/org/kde/ksysguard/table/TreeDecoration.qml
 /usr/lib64/qt5/qml/org/kde/ksysguard/table/UserCellDelegate.qml
 /usr/lib64/qt5/qml/org/kde/ksysguard/table/libTablePlugin.so
@@ -204,6 +205,7 @@ popd
 /usr/share/package-licenses/plasma-systemmonitor/7d9831e05094ce723947d729c2a46a09d6e90275
 /usr/share/package-licenses/plasma-systemmonitor/8287b608d3fa40ef401339fd907ca1260c964123
 /usr/share/package-licenses/plasma-systemmonitor/9950d3fdce1cff1f71212fb5abd31453c6ee2f8c
+/usr/share/package-licenses/plasma-systemmonitor/ce37caa1aac2e9037a7c5648a7519d5bb0970ed3
 /usr/share/package-licenses/plasma-systemmonitor/e458941548e0864907e654fa2e192844ae90fc32
 
 %files locales -f ksysguard_face_org.kde.ksysguard.applicationstable.lang -f ksysguard_face_org.kde.ksysguard.processtable.lang -f plasma-systemmonitor.lang
