@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xD7574483BB57B18D (jr@jriddell.org)
 #
 Name     : plasma-systemmonitor
-Version  : 5.25.5
-Release  : 22
-URL      : https://download.kde.org/stable/plasma/5.25.5/plasma-systemmonitor-5.25.5.tar.xz
-Source0  : https://download.kde.org/stable/plasma/5.25.5/plasma-systemmonitor-5.25.5.tar.xz
-Source1  : https://download.kde.org/stable/plasma/5.25.5/plasma-systemmonitor-5.25.5.tar.xz.sig
+Version  : 5.26.0
+Release  : 23
+URL      : https://download.kde.org/stable/plasma/5.26.0/plasma-systemmonitor-5.26.0.tar.xz
+Source0  : https://download.kde.org/stable/plasma/5.26.0/plasma-systemmonitor-5.26.0.tar.xz
+Source1  : https://download.kde.org/stable/plasma/5.26.0/plasma-systemmonitor-5.26.0.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : BSD-3-Clause CC0-1.0 GPL-2.0 GPL-3.0 LGPL-2.0 LGPL-2.1 LGPL-3.0
@@ -22,7 +22,6 @@ BuildRequires : buildreq-cmake
 BuildRequires : buildreq-kde
 BuildRequires : extra-cmake-modules-data
 BuildRequires : kglobalaccel-dev
-BuildRequires : ki18n-dev
 BuildRequires : kirigami2-dev
 BuildRequires : libksysguard-dev
 
@@ -76,15 +75,15 @@ locales components for the plasma-systemmonitor package.
 
 
 %prep
-%setup -q -n plasma-systemmonitor-5.25.5
-cd %{_builddir}/plasma-systemmonitor-5.25.5
+%setup -q -n plasma-systemmonitor-5.26.0
+cd %{_builddir}/plasma-systemmonitor-5.26.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1662509756
+export SOURCE_DATE_EPOCH=1665770890
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -100,7 +99,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1662509756
+export SOURCE_DATE_EPOCH=1665770890
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/plasma-systemmonitor
 cp %{_builddir}/plasma-systemmonitor-%{version}/LICENSES/BSD-3-Clause.txt %{buildroot}/usr/share/package-licenses/plasma-systemmonitor/9950d3fdce1cff1f71212fb5abd31453c6ee2f8c || :
@@ -154,6 +153,7 @@ popd
 /usr/share/ksysguard/sensorfaces/org.kde.ksysguard.processtable/contents/ui/ProcessTableView.qml
 /usr/share/ksysguard/sensorfaces/org.kde.ksysguard.processtable/metadata.desktop
 /usr/share/ksysguard/sensorfaces/org.kde.ksysguard.processtable/metadata.json
+/usr/share/metainfo/org.kde.plasma-systemmonitor.metainfo.xml
 /usr/share/plasma-systemmonitor/applications.page
 /usr/share/plasma-systemmonitor/history.page
 /usr/share/plasma-systemmonitor/overview.page
@@ -171,6 +171,7 @@ popd
 /usr/lib64/qt5/qml/org/kde/ksysguard/page/FaceConfigurationPage.qml
 /usr/lib64/qt5/qml/org/kde/ksysguard/page/FaceControl.qml
 /usr/lib64/qt5/qml/org/kde/ksysguard/page/LoadPresetDialog.qml
+/usr/lib64/qt5/qml/org/kde/ksysguard/page/MissingSensorsDialog.qml
 /usr/lib64/qt5/qml/org/kde/ksysguard/page/MoveButton.qml
 /usr/lib64/qt5/qml/org/kde/ksysguard/page/PageContents.qml
 /usr/lib64/qt5/qml/org/kde/ksysguard/page/PageDialog.qml
