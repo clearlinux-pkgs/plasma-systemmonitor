@@ -6,7 +6,7 @@
 #
 Name     : plasma-systemmonitor
 Version  : 5.27.0
-Release  : 29
+Release  : 30
 URL      : https://download.kde.org/stable/plasma/5.27.0/plasma-systemmonitor-5.27.0.tar.xz
 Source0  : https://download.kde.org/stable/plasma/5.27.0/plasma-systemmonitor-5.27.0.tar.xz
 Source1  : https://download.kde.org/stable/plasma/5.27.0/plasma-systemmonitor-5.27.0.tar.xz.sig
@@ -89,7 +89,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1676684489
+export SOURCE_DATE_EPOCH=1676869252
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -105,7 +105,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1676684489
+export SOURCE_DATE_EPOCH=1676869252
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/plasma-systemmonitor
 cp %{_builddir}/plasma-systemmonitor-%{version}/LICENSES/BSD-3-Clause.txt %{buildroot}/usr/share/package-licenses/plasma-systemmonitor/9950d3fdce1cff1f71212fb5abd31453c6ee2f8c || :
