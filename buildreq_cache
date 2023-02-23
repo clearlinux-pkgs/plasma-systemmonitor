@@ -1,5 +1,2 @@
-5.27.0
+5.27.1
 kglobalaccel-dev
-kio-dev
-kwindowsystem-dev
-pkgconfig(x11)
