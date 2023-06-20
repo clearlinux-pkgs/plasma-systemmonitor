@@ -6,11 +6,11 @@
 # Source0 file verified with key 0xD7574483BB57B18D (jr@jriddell.org)
 #
 Name     : plasma-systemmonitor
-Version  : 5.27.5
-Release  : 36
-URL      : https://download.kde.org/stable/plasma/5.27.5/plasma-systemmonitor-5.27.5.tar.xz
-Source0  : https://download.kde.org/stable/plasma/5.27.5/plasma-systemmonitor-5.27.5.tar.xz
-Source1  : https://download.kde.org/stable/plasma/5.27.5/plasma-systemmonitor-5.27.5.tar.xz.sig
+Version  : 5.27.6
+Release  : 37
+URL      : https://download.kde.org/stable/plasma/5.27.6/plasma-systemmonitor-5.27.6.tar.xz
+Source0  : https://download.kde.org/stable/plasma/5.27.6/plasma-systemmonitor-5.27.6.tar.xz
+Source1  : https://download.kde.org/stable/plasma/5.27.6/plasma-systemmonitor-5.27.6.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : BSD-3-Clause CC0-1.0 GPL-2.0 GPL-3.0 LGPL-2.0 LGPL-2.1 LGPL-3.0
@@ -79,15 +79,15 @@ locales components for the plasma-systemmonitor package.
 
 
 %prep
-%setup -q -n plasma-systemmonitor-5.27.5
-cd %{_builddir}/plasma-systemmonitor-5.27.5
+%setup -q -n plasma-systemmonitor-5.27.6
+cd %{_builddir}/plasma-systemmonitor-5.27.6
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1685568539
+export SOURCE_DATE_EPOCH=1687292815
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -120,7 +120,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1685568539
+export SOURCE_DATE_EPOCH=1687292815
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/plasma-systemmonitor
 cp %{_builddir}/plasma-systemmonitor-%{version}/LICENSES/BSD-3-Clause.txt %{buildroot}/usr/share/package-licenses/plasma-systemmonitor/9950d3fdce1cff1f71212fb5abd31453c6ee2f8c || :
