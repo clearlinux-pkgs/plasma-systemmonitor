@@ -8,11 +8,11 @@
 # Source0 file verified with key 0xD7574483BB57B18D (jr@jriddell.org)
 #
 Name     : plasma-systemmonitor
-Version  : 6.0.2
-Release  : 45
-URL      : https://download.kde.org/stable/plasma/6.0.2/plasma-systemmonitor-6.0.2.tar.xz
-Source0  : https://download.kde.org/stable/plasma/6.0.2/plasma-systemmonitor-6.0.2.tar.xz
-Source1  : https://download.kde.org/stable/plasma/6.0.2/plasma-systemmonitor-6.0.2.tar.xz.sig
+Version  : 6.0.3
+Release  : 46
+URL      : https://download.kde.org/stable/plasma/6.0.3/plasma-systemmonitor-6.0.3.tar.xz
+Source0  : https://download.kde.org/stable/plasma/6.0.3/plasma-systemmonitor-6.0.3.tar.xz
+Source1  : https://download.kde.org/stable/plasma/6.0.3/plasma-systemmonitor-6.0.3.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : BSD-3-Clause CC0-1.0 GPL-2.0 GPL-3.0 LGPL-2.0 LGPL-2.1 LGPL-3.0
@@ -26,7 +26,6 @@ BuildRequires : buildreq-kde
 BuildRequires : extra-cmake-modules-data
 BuildRequires : kdeplasma-addons-dev
 BuildRequires : kglobalaccel-dev
-BuildRequires : kirigami-addons-dev
 BuildRequires : kirigami-dev
 BuildRequires : ksystemstats
 BuildRequires : libksysguard-dev
@@ -98,15 +97,15 @@ locales components for the plasma-systemmonitor package.
 
 
 %prep
-%setup -q -n plasma-systemmonitor-6.0.2
-cd %{_builddir}/plasma-systemmonitor-6.0.2
+%setup -q -n plasma-systemmonitor-6.0.3
+cd %{_builddir}/plasma-systemmonitor-6.0.3
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1711156563
+export SOURCE_DATE_EPOCH=1711657088
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -167,7 +166,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1711156563
+export SOURCE_DATE_EPOCH=1711657088
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/plasma-systemmonitor
 cp %{_builddir}/plasma-systemmonitor-%{version}/LICENSES/BSD-3-Clause.txt %{buildroot}/usr/share/package-licenses/plasma-systemmonitor/9950d3fdce1cff1f71212fb5abd31453c6ee2f8c || :
